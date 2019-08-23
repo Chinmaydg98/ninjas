@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>{{ ninja.name | uppercase }} Details</h2>
+        <h2>ID : {{ ninja.id }}</h2>
+        <div>
+            <label>
+                <input [(ngModel)] = "ninja.name" placeholder="Name" type="text">
+            </label>
+        </div>
+
+        <h2>Available Units</h2>
+        <ul class="heroes">
+            <li *ngFor="let ninja of list">
+                <span class="badge">{{ ninja.id }}</span> {{ ninja.name }}
+            </li>
+        </ul>
+    </body>
+</html>
