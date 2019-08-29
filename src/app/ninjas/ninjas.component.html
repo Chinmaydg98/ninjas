@@ -1,18 +1,21 @@
 <html>
     <body>
-        <h2>{{ ninja.name | uppercase }} Details</h2>
-        <h2>ID : {{ ninja.id }}</h2>
-        <div>
-            <label>
-                <input [(ngModel)] = "ninja.name" placeholder="Name" type="text">
-            </label>
-        </div>
-
         <h2>Available Units</h2>
         <ul class="heroes">
-            <li *ngFor="let ninja of list">
+            <li *ngFor="let ninja of list" (click)="onSelect(ninja)">
                 <span class="badge">{{ ninja.id }}</span> {{ ninja.name }}
             </li>
         </ul>
+        <div *ngIf="selectedNinja">
+            <h2>{{selectedNinja.name | uppercase}} Details</h2>
+            <div>
+                <span>ID: {{selectedNinja.id}}</span> NAME: {{selectedNinja.name}}
+            </div>
+            <div>
+                <label>Name : 
+                    <input [(ngModel)] = "selectedNinja.name" placeholder="Name">
+                </label>
+            </div>
+        </div>
     </body>
 </html>

@@ -16,6 +16,11 @@ export class NinjasComponent implements OnInit {
 
   list = NList;
 
+  selectedNinja: NinjaClass;
+  onSelect(ninjaF: NinjaClass): void{
+    this.selectedNinja = ninjaF;
+  }
+
   constructor() { }
   ngOnInit() {
   }

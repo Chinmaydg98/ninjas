@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <div>
+        <!--<label><input type="radio" name="genderSelect" ng-model="sGender" value="all" checked>All</label>-->
+        <label><input type="radio" name="gender" (click)="onSelect('all')"/>All</label>
+        <label><input type="radio" name="gender" (click)="onSelect('onlyM')"/>Male</label>
+        <label><input type="radio" name="gender" (click)="onSelect('onlyF')"/>Female</label>
+    </div>
+    <table class="accTable">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Balance</th>
+        </tr>
+        <tr *ngFor="let account of (aList | filterPipe: sGender)">
+            <td>{{account.name | prefixPipe : account.gender}}</td>
+            <td>{{account.gender}}</td>
+            <td>{{account.printAddress()}}</td>
+            <td>{{account.printBalance() | currency:'INR'}}</td>
+        </tr>
+    </table>
+</body>
+
+</html>
