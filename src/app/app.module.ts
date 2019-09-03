@@ -11,6 +11,7 @@ import { filterPipe } from './accounts/filter.pipe';
 import { ServerComComponent } from './server-com/server-com.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     filterPipe,
     ServerComComponent,
     RegisterUserComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
