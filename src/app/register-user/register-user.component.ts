@@ -9,7 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./register-user.component.css']
 })
 
-export class RegisterUserComponent {
+export class RegisterUserComponent implements OnInit {
 
   genders = ['Male', 'Female'];
 
@@ -17,8 +17,26 @@ export class RegisterUserComponent {
 
   submitted = false;
 
+  accountList :  account[];
+
+  constructor(private accountService : AccountService){}
+
+  getAccounts(){
+    this.accountList = this.accountService.getAccountList();
+  }
+
+  ngOnInit(){
+    this.getAccounts();
+  }
+
   onSubmit() {
     this.submitted = true;
+    console.log("Reached onSubmit!");
+  }
+
+  addAccount(){
+    this.model = new account('','');
+    //this.accountList.push(this.model);
   }
 
   get diagnostic() {
