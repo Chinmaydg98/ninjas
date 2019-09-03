@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../account.service';
 import { account } from '../accounts/accountClass';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-register-user',
@@ -35,10 +35,10 @@ export class RegisterUserComponent implements OnInit {
   }
 
   addAccount(){
-    this.model = new account('','');
-    //this.accountList.push(this.model);
+    console.log("Reached addAccount!");
   }
 
+  //Delete diagnostic later
   get diagnostic() {
     return JSON.stringify(this.model);
   }

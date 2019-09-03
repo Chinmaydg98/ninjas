@@ -20,7 +20,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     prefixPipe,
     filterPipe,
     ServerComComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
   ],
   imports: [
     BrowserModule,
