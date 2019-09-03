@@ -1,0 +1,25 @@
+{{ diagnostic }}
+<div>
+    <form #userForm="ngForm">
+        <div>
+            <label for="acName">Name</label>
+            <input type="text" id="acName" class="form-control"  required [(ngModel)]="model.name" name="acName">
+        </div>
+        <br>
+        <div>
+            <label for="acGender">Gender</label>
+            <select class="form-control" id="acGender" 
+                required
+                [(ngModel)]="model.gender" name="acGender">
+                <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="acBalance">Balance</label>
+            <input type="number" id="acBalance" class="form-control" [(ngModel)]="model.balance" name="acBalance">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

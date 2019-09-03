@@ -8,6 +8,9 @@ import { NinjasComponent } from './ninjas/ninjas.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { prefixPipe } from './accounts/prefix.pipe';
 import { filterPipe } from './accounts/filter.pipe';
+import { ServerComComponent } from './server-com/server-com.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { filterPipe } from './accounts/filter.pipe';
     NinjasComponent,
     AccountsComponent,
     prefixPipe,
-    filterPipe
+    filterPipe,
+    ServerComComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
