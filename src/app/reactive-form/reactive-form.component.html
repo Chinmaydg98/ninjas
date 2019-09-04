@@ -1,0 +1,10 @@
+<form [formGroup]="uForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="uName">
+    </label>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+Value = {{ uForm.status }}

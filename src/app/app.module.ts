@@ -12,6 +12,8 @@ import { ServerComComponent } from './server-com/server-com.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ServerComComponent,
     RegisterUserComponent,
     DashboardComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
