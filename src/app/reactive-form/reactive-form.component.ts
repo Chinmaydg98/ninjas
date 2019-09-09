@@ -9,7 +9,7 @@ import { FormControl, Validators, FormGroup } from '@angular/forms';
 export class ReactiveFormComponent implements OnInit {
   
   uForm = new FormGroup ({
-    uName: new FormControl('', Validators.required),
+    uName: new FormControl(''),
   });
 
   onSubmit(){
